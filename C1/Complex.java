@@ -1,42 +1,20 @@
+import java.util.Scanner;
 public class Complex {
-    
-    int real, img;
-
-    public Complex(int real, int img){
-        this.img = img;
-        this.real = real;
-    }
-
-    void display() {
-        System.out.println(this.real + "+" + this.img + "i");
-    }
-
-    public static Complex add(Complex n1, Complex n2){
-        Complex res = new Complex(0, 0);
-
-        res.real = n1.real + n2.real;
-
-        res.img = n1.img + n2.img;
-
-        return res;
-    }
-    
-    public static void main(String[] args) {
-
-
-        System.out.println("Name: Aslam Ismail \nReg no : 23MCA022 \nDate : 14/02/2024");
-        System.out.println("3, Add complex number.");
-
-        Complex c1 = new Complex(4, 6);
-        Complex c2 = new Complex(7, 2);
-
-        System.out.println("First complex number  : ");
-        c1.display();
-        System.out.println("Second complex number  : ");
-        c2.display();
-
-        Complex res = add(c1, c2);
-        System.out.println("Addition of complex number  : ");
-        res.display();
-    }
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.println(" Aslam Ismail\n 23MCA022\n 13-Feb-2024");
+System.out.println("Enter the real part of the first complex number:");
+double real1 = scanner.nextDouble();
+System.out.println("Enter the imaginary part of the first complex number:");
+double imaginary1 = scanner.nextDouble();
+System.out.println("Enter the real part of the second complex number:");
+double real2 = scanner.nextDouble();
+System.out.println("Enter the imaginary part of the second complex number:");
+double imaginary2 = scanner.nextDouble();
+double sumReal = real1 + real2;
+double sumImaginary = imaginary1 + imaginary2;
+System.out.println("Sum of the complex numbers: " + sumReal + " + " +
+sumImaginary + "i");
+scanner.close();
+}
 }
